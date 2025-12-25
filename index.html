@@ -3,10 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
-    <link href="css/style.css" rel="stylesheet" />
+    <title>Jordan Jack Media Server</title>
+    <!-- <link href="css/style.css" rel="stylesheet" /> -->
   </head>
   <body>
     <h1>Hello from the Server</h1>
+    <ol id="link-container">
+    </ol>
+    <script>
+      let data = [
+        {
+          title: "How To Train Your Dragon 2010",
+          slug: 'how_to_train_your_dragon_2010'
+        },
+        {
+          title: "Silent Voice (SUB-ENG)",
+          slug: "silent_voice"
+        },
+        {
+          title: "Silent Voice (DUB-ENG)",
+          slug: "silent_voice_eng_dub"
+        }
+      ]
+      let linkContainer = document.getElementById('link-container');
+      linkContainer.innerHTML= data.map((item) => `<li>${item.title} : https://jordan-jack-12.github.io/media-server-personal/${item.slug}/output.m3u8</li>`)
+    </script>
   </body>
 </html>
